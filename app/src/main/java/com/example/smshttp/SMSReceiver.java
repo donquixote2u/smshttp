@@ -83,13 +83,15 @@ public class SMSReceiver extends BroadcastReceiver {
 					for (int j = 0; j < items.size(); j++) {
 						String sendTo = items.get(j).get(0);
 						if (sendTo.toLowerCase() == "sender") sendTo = sender;
-						String sendMsg = items.get(j).get(1);
+						// String sendMsg = items.get(j).get(1);
+						// getting error in sms send;  to big msg? try this
+						String sendMsg = "Debug";
 						
 						try {
 							Log.d("KALSMS", "SEND MSG:\"" + sendMsg + "\" TO: " + sendTo);
 							smgr.sendTextMessage(sendTo, null, sendMsg, null, null);
 						} catch (Exception ex) {
-							Log.d("KALSMS", "SMS FAILED");
+							Log.d("KALSMS", "SMS FAILED \"" + ex + "\"");
 						}
 					}
 				}
