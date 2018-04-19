@@ -1,11 +1,14 @@
+import com.android.build.gradle.AppExtension
+
 apply plugin: 'com.android.application'
 
-android {
+def Version = android {
     compileSdkVersion 15
 //    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.example.smshttp"
+        // minSdkVersion 15
     }
 
     buildTypes {

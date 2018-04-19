@@ -79,19 +79,33 @@ public class SMSReceiver extends BroadcastReceiver {
 					ArrayList<ArrayList<String>> items = parseXML(resp);
 					
 					SmsManager smgr = SmsManager.getDefault();
-					
+
 					for (int j = 0; j < items.size(); j++) {
 						String sendTo = items.get(j).get(0);
 						if (sendTo.toLowerCase() == "sender") sendTo = sender;
-						// String sendMsg = items.get(j).get(1);
-						// getting error in sms send;  to big msg? try this
-						String sendMsg = "Debug";
-						
-						try {
+						String sendMsg = items.get(j).get(1);
+						if (sendMsg!=null && !sendMsg.isEmpty()) {
 							Log.d("KALSMS", "SEND MSG:\"" + sendMsg + "\" TO: " + sendTo);
-							smgr.sendTextMessage(sendTo, null, sendMsg, null, null);
-						} catch (Exception ex) {
-							Log.d("KALSMS", "SMS FAILED \"" + ex + "\"");
+							// 19/4/18 revise to use multipart txt send instead of single
+							if (sendMsg.length() > 155) {
+								ArrayList<String> parts = smgr.divideMessage(sendMsg);
+								try {
+									// smgr.sendTextMessage(sendTo, null, sendMsg, null, null);
+									smgr.sendMultipartTextMessage(sendTo, null, parts, null, null);
+								} catch (Exception ex) {
+									Log.d("KALSMS", "SMS MULTIPART FAILED \"" + ex + "\"");
+								}
+							}
+							else {	// sms < 155
+								try {
+									smgr.sendTextMessage(sendTo, null, sendMsg, null, null);
+								} catch (Exception ex) {
+									Log.d("KALSMS", "SMS SEND FAILED \"" + ex + "\"");
+								}
+							}
+						}
+						else  {
+							Log.d("KALSMS", "NO DATA RETURNED ");
 						}
 					}
 				}
