@@ -1,7 +1,7 @@
 #Internal package file, do not edit.
-#Wed Apr 18 14:50:44 NZST 2018
+#Fri Apr 27 14:26:35 NZST 2018
 0.baseType=DIRECTORY
-0.base=/home/bruce/StudioProjects/smshttp/app/build/intermediates/transforms/dexMerger/debug/0
+0.base=/home/bruce/SW/Android/StudioProjects/smshttp/app/build/intermediates/transforms/dexMerger/debug/0
 0.path=classes.dex
 0.set=DEX
 count=1

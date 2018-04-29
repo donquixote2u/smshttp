@@ -1,6 +1,5 @@
 package com.example.smshttp;
 
-import com.example.smshttp.R;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/bruce/StudioProjects/smshttp/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "/home/bruce/SW/Android/StudioProjects/smshttp/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/bruce/StudioProjects/smshttp/app/src/main/res/values/strings.xml",
+                    "source": "/home/bruce/SW/Android/StudioProjects/smshttp/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,2",
                         "startColumns": "4,4",

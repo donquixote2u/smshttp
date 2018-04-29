@@ -1,4 +1,4 @@
-#Wed Apr 18 14:50:44 NZST 2018
-base.0=/home/bruce/StudioProjects/smshttp/app/build/intermediates/transforms/dexMerger/debug/0
+#Fri Apr 27 14:26:35 NZST 2018
+base.0=/home/bruce/SW/Android/StudioProjects/smshttp/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
