@@ -7,4 +7,6 @@ it will send http request to a (web) server  (sample php code in examples; smsht
 and return the response as sms txt(s) to the requesting phone<br>
 http server xml response format here: https://github.com/niryariv/KalSMS/wiki/Reply-XML<br>
 
+NB 20/6/18 THIS HAS BEEN SUPERCEDED BY SMS_WEB_RELAY which also has sms-from-web capability
+
 
